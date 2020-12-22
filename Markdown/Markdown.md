@@ -18,33 +18,33 @@ html의 **h1** 태그부터 **h6** 태그까지 표현할 수 있다.
     # header1
 
 - header 2
-```
-## header2
-```
-✅결과
-## header2
+    ```
+    ## header2
+    ```
+    ✅결과
+    ## header2
 
 - h1과 h2는 =과 -로도 표현할 수 있다.
-```
-header1
-===
+    ```
+    header1
+    ===
 
-header2
----
+    header2
+    ---
 
-기호를 2개 이상 사용하면 대체가 가능하다.
-```
+    기호를 2개 이상 사용하면 대체가 가능하다.
+    ```
 
 - header 3, 4, 5, 6
-```
-### header3
-#### header4
-##### header5
-###### header6
-```
-✅결과
-### header3
-#### header4
-##### header5
-###### header6
+    ```
+    ### header3
+    #### header4
+    ##### header5
+    ###### header6
+    ```
+    ✅결과
+    ### header3
+    #### header4
+    ##### header5
+    ###### header6
 -----
