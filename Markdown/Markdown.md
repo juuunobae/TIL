@@ -15,8 +15,8 @@ html의 **h1** 태그부터 **h6** 태그까지 표현할 수 있다.
     # header1
     ```
     ✅결과
-    # header1
-<br/>
+    # header1 
+<br/><br/>
 - header 2
     ```
     ## header2
