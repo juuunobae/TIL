@@ -99,3 +99,18 @@ __굵게__
 ~취소선~<br/>
 
 ---
+
+### 링크(Links)
+- 일반 URL이나 <>안의 URL은 자동으로 Link로 바뀐다.
+```
+깃허브: https://github.com
+google: <https://google.com>
+
+[깃허브](https://github.com)
+```
+✅결과
+깃허브: https://github.com
+google: <https://google.com>
+
+[깃허브](https://github.com)
+---
