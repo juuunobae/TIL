@@ -142,8 +142,8 @@ normal
     code
 end code
 ```
-✅결과
-normal  
+✅결과  
+normal
     code  
 end code
 ---
