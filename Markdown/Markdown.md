@@ -135,15 +135,14 @@ google: <https://google.com>
 
 ### 2.6 코드
 #### 코드 블럭
-- 들여쓰기
-    - 4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되어 들여쓰지 않은 행을 만날 때 까지 유지된다.
+- '\`\`\`' 로 코드를 묶어준다.
 ```
-normal
-    code
-end code
+\`\`\`
+<span>hello</span>
+\`\`\`
 ```
 ✅결과  
-normal  
-    code  
-end code  
+```
+<span>hello</span>
+```
 
