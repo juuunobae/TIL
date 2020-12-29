@@ -137,6 +137,7 @@ google: <https://google.com>
 
 #### 인라인 블럭
 - '\`'로 코드를 묶어준다.  
+
 \`{code}\`  
 ✅결과  
 `{code}`  
@@ -151,4 +152,13 @@ google: <https://google.com>
 ```
 <span>hello</span>
 ```
+- '\`\`\`'뒤에 언어 종류를 적어주면 그 언어에 맞게 코드를 표현해준다.  
 
+\`\`\`html
+<span>hello</span> 
+\`\`\`  
+✅결과
+```html
+<span>hello</span> 
+```
+---
