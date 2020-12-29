@@ -164,10 +164,19 @@ console.log(a);
 const a = 'hello';
 console.log(a);
 ```
+
+```python
+a = 'hello'
+print(a)
+```
 </pre>
 ✅결과
 ```javascript
 const a = 'hello';
 console.log(a);
+```
+```python
+a = 'hello'
+print(a)
 ```
 ---
