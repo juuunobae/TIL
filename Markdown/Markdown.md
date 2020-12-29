@@ -144,10 +144,11 @@ google: <https://google.com>
 
 #### 코드 블럭
 - '\`\`\`' 로 코드를 묶어준다.  
-
-\`\`\`  
+```
+"```"  
 <span>hello</span>  
-\`\`\`  
+"```"
+```
 ✅결과  
 ```
 <span>hello</span>
