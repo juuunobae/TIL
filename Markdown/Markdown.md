@@ -143,12 +143,12 @@ google: <https://google.com>
 `{code}`  
 
 #### 코드 블럭
-- '\`\`\`' 로 코드를 묶어준다.  
-```
-"```"  
+- '\`\`\`' 로 코드를 묶어준다.
+<code>
+``` 
 <span>hello</span>  
-"```"
 ```
+</code>
 ✅결과  
 ```
 <span>hello</span>
