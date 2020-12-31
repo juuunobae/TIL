@@ -197,4 +197,17 @@ print(a)
 | javascript | 1995 | react |
 | python | 1991 | django |
 | java | 1995 | spring |
+
+---
+
+### 2.8 체크박스
+- \-, \*, \+ 뒤에 사이가 한 칸 띄워진 대괄호를 작성하면 빈 체크박스, 사이에 x가 적힌 대괄호를 작성하면 체크가 된 체크박스가 생성된다.
+```
+- [ ] html
+- [x] javascript
+```
+✅결과
+- [ ] html
+- [x] javascript
+
 ---
