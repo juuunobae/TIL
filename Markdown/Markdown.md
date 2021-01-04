@@ -131,6 +131,7 @@ google: <https://google.com>
 >>>중중첩된 인용문
   
 > - 인용문 안에 다른 마크다운요소
+
 ---
 
 ### 2.6 코드
@@ -178,6 +179,8 @@ console.log(a);
 ```python
 a = 'hello'
 print(a)
+
+
 ```
 ---
 
@@ -211,3 +214,17 @@ print(a)
 - [x] javascript
 
 ---
+
+### 2.9 이미지
+- ![이미지 이름](이미지 URL) 순으로 적어주면 된다.
+- 이미지의 크기를 조절할 때는 html문법으로 작성해야 하며 width값과 height값을 넣어주면 된다.
+- 이미지에 링크를 걸려면 [![!이미지 이름](이미지 URL)](연결 하고자 하는 링크 URL "마우스 오버 시 나타낼 링크 title)
+```
+![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)
+<img src='https://en.wikipedia.org/wiki/File:React-icon.svg' width='20px' height='20px' />
+[![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)](https://en.wikipedia.org/wiki/File:React-icon.svg 'react wiki')
+```
+✅결과  
+![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)
+<img src='https://en.wikipedia.org/wiki/File:React-icon.svg' width='20px' height='20px' />
+[![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)](https://en.wikipedia.org/wiki/File:React-icon.svg 'react wiki')
