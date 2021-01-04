@@ -220,11 +220,11 @@ print(a)
 - 이미지의 크기를 조절할 때는 html문법으로 작성해야 하며 width값과 height값을 넣어주면 된다.
 - 이미지에 링크를 걸려면 [![!이미지 이름](이미지 URL)](연결 하고자 하는 링크 URL "마우스 오버 시 나타낼 링크 title)
 ```
-![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)
-<img src='https://en.wikipedia.org/wiki/File:React-icon.svg' width='20px' height='20px' />
-[![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)](https://en.wikipedia.org/wiki/File:React-icon.svg 'react wiki')
+![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png' width='20px' height='20px' />
+[![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)](https://en.wikipedia.org/wiki/React_(web_framework) 'react wiki')
 ```
 ✅결과  
-![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)
-<img src='https://en.wikipedia.org/wiki/File:React-icon.svg' width='20px' height='20px' />
-[![react img](https://en.wikipedia.org/wiki/File:React-icon.svg)](https://en.wikipedia.org/wiki/File:React-icon.svg 'react wiki')
+![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png' width='20px' height='20px' />
+[![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)](https://en.wikipedia.org/wiki/React_(web_framework) 'react wiki')
