@@ -225,6 +225,8 @@ print(a)
 [![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)](https://en.wikipedia.org/wiki/React_(web_framework) 'react wiki')
 ```
 ✅결과  
-![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png' width='20px' height='20px' />
+![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)  
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png' width='40px' height='40px' />  
 [![react img](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png)](https://en.wikipedia.org/wiki/React_(web_framework) 'react wiki')
+
+---
