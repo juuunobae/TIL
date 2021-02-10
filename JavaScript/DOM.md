@@ -7,5 +7,5 @@
 ## DOM 구조
 ![dom](https://postfiles.pstatic.net/MjAyMDExMTRfMjI3/MDAxNjA1MzY0NjQ1NTk0.SuR_5N0SL5Lu6iZGXkhKVsXeYsqp5sXxmiKn954MpFwg.AZKuC0_F5RbuPNhspMJwwYjCKRJ9dlnpWMxmXc13Wlgg.PNG.geonha1369/document.png?type=w966)
 
-## DOM접근
+## DOM에 접근
 - document. 를 사용하여 접근 가능하다.
