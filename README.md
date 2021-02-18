@@ -16,7 +16,7 @@
 - API
   - [Restful API](https://github.com/juuunobae/TIL/blob/main/API/restAPI.md)
    
-- JavaScript
+- WEB
   - [DOM](https://github.com/juuunobae/TIL/blob/main/JavaScript/DOM.md)
   
 - NodeJS
