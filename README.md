@@ -21,5 +21,6 @@
   
 - NodeJS
   - [노드의 특성](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드의%20특성.md) 
+  - [노드와 서버](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드와%20서버.md)
   - [노드 설치하기](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드%20설치하기.md)
   - [Middleware](https://github.com/juuunobae/TIL/blob/main/NodeJS/middleware.md)
