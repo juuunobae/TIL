@@ -24,4 +24,5 @@
   - [노드와 서버](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드와%20서버.md)
   - [노드 설치하기](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드%20설치하기.md)
   - [호출 스택](https://github.com/juuunobae/TIL/blob/main/NodeJS/호출%20스택.md)
+  - [이벤트 루프](https://github.com/juuunobae/TIL/blob/main/NodeJS/이벤트%20루프.md)
   - [Middleware](https://github.com/juuunobae/TIL/blob/main/NodeJS/middleware.md)
