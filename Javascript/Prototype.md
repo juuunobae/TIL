@@ -78,10 +78,32 @@
    Object.prototype.c = 30;
    
    const obj new Test();
+   
    console.log(obj); // Test { a: 10 }
    console.log(obj.a); // 10
    console.log(obj.b); // 20
    console.log(obj.c); // 30
    console.log(obj.d); // undefined
 ```
-- 위 코드처럼 \_\_proto__를 직접
+- 위 코드처럼 \_\_proto__를 직접 명시하지 않아도 프로토타입 연쇄가 발행한다.
+- obj를 콘솔에 찍어보면 new 바인딩에 의해서 객체 obj에 a라는 프로퍼티가 등록되어있음을 확인할 수 있다.
+- b, c라는 프로퍼티는 객체 obj에 존재하지 않음에도 호출됨을 볼 수 있다.
+   - 프로토타입 연쇄 과정을 통해 프로퍼티를 찾아냈기 때문이다.
+
+```javascript
+   function Test(){
+      this.a = 10;
+   }
+   
+   Test.prototype.b = 20;
+   Object.prototype.c = 30;
+   
+   const obj new Test();
+   
+   // obj.__proto__ === Test.prototype -> true
+   console.log(obj.__proto__.b); // 20
+   // obj.__proto__.__proto__ === Object.prototype -> true
+   console.log(obj.__proto__.__proto__.c); // 30
+```
+- obj의 [[prototype]] 링크(\_\_proto__)가 Test 함수의 prototype과 같고, 이를 통해 b를 참조할 수 있다.
+- obj의 [[prototype]] 링크(\_\_proto__)의 [[prototype]] 링크가 Object 함수의 prototype과 같고, 이를 통해 c를 참조할 수 있다.
