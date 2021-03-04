@@ -107,3 +107,79 @@
 ```
 - obj의 [[prototype]] 링크(\_\_proto__)가 Test 함수의 prototype과 같고, 이를 통해 b를 참조할 수 있다.
 - obj의 [[prototype]] 링크(\_\_proto__)의 [[prototype]] 링크가 Object 함수의 prototype과 같고, 이를 통해 c를 참조할 수 있다.
+
+# 프로토타입 체인
+- 프로토타입 체인을 연결하면 메모리 관점에서 장점이 있다.
+
+```javascript
+   function Person(name){
+      this.sayName = function() {
+         console.log(`안녕하세요 ${this.name}입니다.`);
+      };
+   }
+   
+   let p1 = new Person('js');
+   let p2 = new Person('jjss');
+   
+   console.log(p1); // Person { name: 'js', sayName: [Function] }
+   p1.sayName(); // 안녕하세요 js입니다.
+   console.log(p2); // Person { name: 'jjss', sayName: [Function] }
+   p2.sayName(); // 안녕하세요 jjss입니다.
+   
+   console.log(p1.sayName === p2.sayName); //false
+```
+- 위 코드에서 클래스의 역할을 하는 Person 함수는 멤버변수 name과, name을 출력하는 sayName이라는 메소드를 정의하는 행위를 한다.
+- new Person으로 생성된 객체 p1, p2는 각각 name과 sayName 함수를 가지고 있는 모습을 볼 수 있다.
+- sayName이라는 메소드가 공통적으로 사용됨을 볼 수 있다.
+- 이를 prototype을 사용할 수 있도록 바꿔줄 수 있다.
+
+```javascript
+   function Person(name) {
+      this.name = name
+   }
+   
+   Person.prototype.sayName = function() {
+      console.log(`안녕하세요 ${this.name}입니다.`);
+   };
+   
+   let p1 = new Person('js');
+   let p2 = new Person('jjss');
+   
+   console.log(p1); // Person { name: 'js' }
+   p1.sayName(); // 안녕하세요 js입니다.
+   console.log(p2); // Person { name: 'jjss' }
+   p2.sayName(); // 안녕핳세요 jjss입니다.
+   
+   console.log(p1.sayName === p2.sayName); //true
+```
+
+- 공통 메소드인 sayName을 Person 함수의 prototype에 정의한다.
+- p1과 p2에서 sayName이 호출되고 있지만 각 객체안에는 sayName 프로퍼티가 보이지 않고, 하단 console.log를 보면 true를 나타내고 있다.
+   - 프로토타입 체인으로 p1과 p2의 \_\_proto__는 같은 prototype, 즉 Person의 prototype을 참조하고 있기 때문이다.
+   - 각 객체에 sayName 함수를 할당하는 것 보다 prototype에 정의된 sayName함수를 참조하는 것이 메모리 측면에서 이득이다.
+
+```javascript
+   Array.prototype.findOneIndex = function(value) {
+      for (let i = 0, length = this.length; i < length; i++) {
+         if (this[i] === value) {
+            return i;
+         }
+      }
+   }
+   
+   console.log([5, 4, 3, 2, 1].findOneIndex(4)); // 1
+   
+   Number.prototype.toDollor = function() {
+      return this.valueOf() + '$';
+   };
+   
+   let salary = 100;
+   console.log(salary.toDollor()); // 100$
+```
+
+- 위 코드처럼 Number, String, Array, Object 같은 네이테브 함수의 prototype에 나만의 공통 함수를 정의하여 사용할 수 있다.
+   - 다른 사람들과 일하다보면 prototype에 뭘 붙여놓는 것은 골치아픈 일이 될 수 있다.
+   - 필요하다면 개인적으로 모듈을 만들어서 사용하는 것을 권장한다.
+
+# prototype 상속 패턴 구현
+- prototype에 공용 메소드를 정의하고, 생성된 객체가 눈에 보이지 않는 메소드를 참조하는 모습은 다른 언어의 class를 상속하여 사용하는 모습과 비슷한 느낌을 준다.
