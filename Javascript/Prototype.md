@@ -183,3 +183,83 @@
 
 # prototype 상속 패턴 구현
 - prototype에 공용 메소드를 정의하고, 생성된 객체가 눈에 보이지 않는 메소드를 참조하는 모습은 다른 언어의 class를 상속하여 사용하는 모습과 비슷한 느낌을 준다.
+
+```javascript
+   function Parent(name) {
+      this.name = name
+   }
+   
+   Parent.prototype.sayName = function() {
+      console.log(`my name is ${this.name}`);
+   }
+   
+   function Children(name, age) {
+      Parent.call(this, name);
+      this.age = age;
+   }
+   
+   Children.prototype = Object.create(Parent.prototype); 
+   // Parent.protoype을 [[prototype]]으로 갖는 객체를 Children.prototype에 연결
+   
+   Children.prototype.sayAge = function() {
+      console.log(`my age is ${this.age}`);
+   };
+   
+   let p1 = new Children('js', 20);
+   console.log(p1); // { name: 'js', age: 20 }
+   p1.sayName(); // my name is js
+   p1.sayAge(); // my age is 20
+```
+- prototype을 조작하여 만든 상속 패턴이다.
+- Children 함수 내에서 this를 Parent 함수에 넘겨서 호출하는 것으로 부모의 생성자를 호출하는 부분을 구현한다.
+- Children의 prototype을 Parent의 Prototype과 관계 맺어줌으로써 상속 형태를 구현 했다.  
+
+> prototype을 사용하여 상속을 구현하면 java의 상속과 크게 다른점이 생기는데
+> java에서는 상속된 클래스의 객체를 생성할 경우, 각 객체(인스턴스)마다 부모 영역이 메모리 공간에 잡힌다고 한다.
+### java
+#### p1 객체
+| | |
+|---|---|
+| Parent | |
+| sayName | |
+| Children | |
+| sayAge | |
+
+#### p2 객체
+| | |
+|---|---|
+| Parent | |
+| sayName | |
+| Children | |
+| sayAge | |
+
+- java의 p객체들은 모두 Parent 영역까지 가지고 있는 모습이다.
+
+### javascript
+#### Parent.prototype 객체
+| | |
+|---|---|
+| [[prototype]] | |
+| sayName | |
+
+#### Children.prototype 객체
+| | |
+|---|---|
+| [[prototype]] | Parent.prototype 객체 참조 |
+| sayName | |
+
+#### p1 객체
+| | |
+|---|---|
+| [[prototype]] | Children.prototype 객체 참조 |
+| ... | |
+
+#### p2 객체
+| | |
+|---|---|
+| [[prototype]] | Children.prototype 객체 참조 |
+| ... | |
+
+- javascript의 p객체들은 [[prototype]]을 통해서 하나의 Parent를 참조하고 있는 모습이다.
+- 상속관계가 깊어질수록 [[prototype]] 과정이 많이 일어나야 하기 때문에 참조에 대한 이슈가 있을 수 있다.
+
