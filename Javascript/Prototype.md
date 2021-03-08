@@ -263,3 +263,6 @@
 - javascript의 p객체들은 [[prototype]]을 통해서 하나의 Parent를 참조하고 있는 모습이다.
 - 상속관계가 깊어질수록 [[prototype]] 과정이 많이 일어나야 하기 때문에 참조에 대한 이슈가 있을 수 있다.
 
+#### javascript에서는 객체간 관계를 `작동 위임`이라는 디자인 방식으로 구현할 수 있다.
+- `작동 위임` 방식은 객체의 [[prototype]]이 되는 객체를 직접 지정하는 방식이다.
+- Object.create(prototypeObj) 
