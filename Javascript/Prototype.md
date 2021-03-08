@@ -285,6 +285,57 @@
    p2.sayName(); // jjss
    console.log(p2.__proto__ === Person); // true
 ```
-- 클래스 역할을 하는 
+- 클래스 역할을 하는 function도 없고, prototype을 조작할 일도 없다.
+- 클래스 패턴에서는 기능을 정의한 class를 만들고 -> class간 관계를 만들고 -> 객체를 생성했지만, 
+- 작동 위임에서는 기능을 정의한 객체를 만들고 -> 객체를 이어줌으로써 동일한 동작을 구현할 수 있다.
+
+#### Person 객체
+| | |
+|---|---|
+| [[prototype]] | |
+| sayName | |
 
 
+#### p1 객체
+| | |
+|---|---|
+| [[prototype]] | Person 객체 참조 |
+| name | |
+
+#### p2 객체
+| | |
+|---|---|
+| [[prototype]] | Person 객체 참조 |
+| name | |
+
+- prototype과의 관계가 빠지면서 깔끔해진다.
+
+```javascript
+   let parent = {
+      sayName: function() {
+         console.log(`my name is ${this.name}`);
+      },
+   };
+   
+   let children = {
+      sayAge: function(){
+         console.log(`my age is ${this.age}`);
+      },
+   }
+   
+   Object.setPrototypeOf(children, parent);
+   
+   function makePerson(name, age) {
+      let p = {
+         name: name,
+         age: age
+      }
+      
+      Ogject.setPrototypeOf(p, children);
+      return p;
+   };
+   
+   let p1 = makePerson('js', 20);
+   p1.sayName(); // my name is js
+   p1.sayAge(); // my age is 20
+```
