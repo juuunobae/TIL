@@ -16,8 +16,9 @@
 - API
   - [Restful API](https://github.com/juuunobae/TIL/blob/main/API/restAPI.md)
    
-- WEB
+- JS
   - [DOM](https://github.com/juuunobae/TIL/blob/main/JavaScript/DOM.md)
+  - [Prototype](https://github.com/juuunobae/TIL/blob/main/Javascript/Prototype.md)
   
 - NodeJS
   - [노드의 특성](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드의%20특성.md) 
