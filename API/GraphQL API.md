@@ -42,3 +42,22 @@
 ```
 
 - 쿼리는 데이터(R)를 읽는데 사용하고, 뮤테이션은 데이터를 변조(CUD)하는데 사용한다는 개념적인 규약을 정해놓은 것이다.
+
+```sql
+	{
+		human(id: '1000') {
+			name
+			heigth
+		}
+	}
+	
+	query HeroNameAndFriends($episode: Episode) {
+    hero(episode: $episode) {
+      name
+      friends {
+        name
+      }
+    }
+  }
+```
+- 
