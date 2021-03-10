@@ -45,10 +45,10 @@
 
 ```sql
 	{
-		human(id: '1000') {
-			name
-			heigth
-		}
+	  human(id: '1000') {
+      name
+	    heigth
+	  }
 	}
 	
 	query HeroNameAndFriends($episode: Episode) {
