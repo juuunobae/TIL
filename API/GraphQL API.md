@@ -26,8 +26,8 @@
 - 요청하는 쿼리문의 구조와 응답받은 데이터의 구조는 거의 일치한다.
 ```javascript
 	{ 
-		hero {
-			name
+    hero {
+		  name
 		}
 	}
 	
