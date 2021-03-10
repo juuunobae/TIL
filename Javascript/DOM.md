@@ -1,11 +1,14 @@
-# DOM
+# BOM과 DOM
+## BOM
+- 웹은 기본적으로 웹 브라우저를 통해 서비스된다.
+- 브라우저는 html을 읽어들여 사용자에게 보여주는데 이러한 브라우저와 관련된 객체들의 집합을 `브라우저 객체 모델(Browser Object Model, BOM)`이다.
+- 브라우저는 BOM을 이용하여 브라우저의 기능들을 수행할 수 있다.
 
-## DOM이란
-- doucument Object model
-- 프로그래밍언어가 DOM 구조에 접근하 수 있는 방법을 제공하여 문서 구조, 스타일, 내용 등을 변경하 수 있게 해준다.
-	
-## DOM 구조
-![dom](https://postfiles.pstatic.net/MjAyMDExMTRfMjI3/MDAxNjA1MzY0NjQ1NTk0.SuR_5N0SL5Lu6iZGXkhKVsXeYsqp5sXxmiKn954MpFwg.AZKuC0_F5RbuPNhspMJwwYjCKRJ9dlnpWMxmXc13Wlgg.PNG.geonha1369/document.png?type=w966)
+## DOM
+- BOM의 하위 객체로써 `Document Object Model`의 약자이며 문서 객체 모델이라고 한다.
+- 문서 객체란 <html>, <body>등의 태그들, 즉 자바스크립트를 이용하여 수정이 가능한 객체라고 할 수 있다.
+- DOM은 브라우저가 자바스크립트를 이용해 웹 페이지를 조작할 수 있도록 제공해주는 요소이고, 그런 조작들을 엄밀히 말하면 원본 html문서를 조작하는 것이 아니라 DOM을 조작하는 것이다.
 
-## DOM에 접근
-- document. 를 사용하여 접근 가능하다.
+# 트리구조
+- DOM은 `트리구조`로 이루어져 있다. 
+- []
