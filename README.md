@@ -19,6 +19,7 @@
 - JS
   - [DOM](https://github.com/juuunobae/TIL/blob/main/JavaScript/DOM.md)
   - [Prototype](https://github.com/juuunobae/TIL/blob/main/Javascript/Prototype.md)
+  - [스코프](https://github.com/juuunobae/TIL/blob/main/Javascript/스코프.md)
   
 - NodeJS
   - [노드의 특성](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드의%20특성.md) 
