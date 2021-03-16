@@ -17,7 +17,7 @@
   - [Restful API](https://github.com/juuunobae/TIL/blob/main/API/restAPI.md)
    
 - JS
-  - [DOM](https://github.com/juuunobae/TIL/blob/main/JavaScript/DOM.md)
+  - [DOM](https://github.com/juuunobae/TIL/blob/main/Javascript/DOM.md)
   - [Prototype](https://github.com/juuunobae/TIL/blob/main/Javascript/Prototype.md)
   - [스코프](https://github.com/juuunobae/TIL/blob/main/Javascript/스코프.md)
   - [호이스팅](https://github.com/juuunobae/TIL/blob/main/Javascript/호이스팅.md)
