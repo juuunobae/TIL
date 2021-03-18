@@ -23,8 +23,8 @@
   - [Prototype](https://github.com/juuunobae/TIL/blob/main/Javascript/Prototype.md)
   - [스코프](https://github.com/juuunobae/TIL/blob/main/Javascript/스코프.md)
   - [호이스팅](https://github.com/juuunobae/TIL/blob/main/Javascript/호이스팅.md)
-  - [호출 스택](https://github.com/juuunobae/TIL/blob/main/NodeJS/호출%20스택.md)
-  - [이벤트 루프](https://github.com/juuunobae/TIL/blob/main/NodeJS/이벤트%20루프.md)
+  - [호출 스택](https://github.com/juuunobae/TIL/blob/main/Javascript/호출%20스택.md)
+  - [이벤트 루프](https://github.com/juuunobae/TIL/blob/main/Javascript/이벤트%20루프.md)
   
 - NodeJS
   - [노드의 특성](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드의%20특성.md) 
