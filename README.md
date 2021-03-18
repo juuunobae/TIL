@@ -18,6 +18,7 @@
    
 - JS
   - [컴파일레이션](https://github.com/juuunobae/TIL/blob/main/Javascript/%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%A0%88%EC%9D%B4%EC%85%98.md)
+  - [내장타입과 네이티브](https://github.com/juuunobae/TIL/blob/main/Javascript/%EB%82%B4%EC%9E%A5%ED%83%80%EC%9E%85%EA%B3%BC%20%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C.md)
   - [DOM](https://github.com/juuunobae/TIL/blob/main/Javascript/DOM.md)
   - [Prototype](https://github.com/juuunobae/TIL/blob/main/Javascript/Prototype.md)
   - [스코프](https://github.com/juuunobae/TIL/blob/main/Javascript/스코프.md)
