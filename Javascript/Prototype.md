@@ -30,7 +30,7 @@
 - 위 코드는 obj1과 obj2가 프로토타입 링크에 의해 동일한 프로토타입 객체(Object.prototype)를 참조하고 있음을 나타내고 있다.
 
 ```javascript
-   const a = 0[1, 2, 3];
+   const a = [1, 2, 3];
    const b = new Array([4, 5, 6]);
    
    console.log(a.__proto__ === Array.prototype); //true
