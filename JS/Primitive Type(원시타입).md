@@ -52,4 +52,57 @@
 
 ## 생성자 함수
 - 리턴 값으로 생성하는 함수를 객체 그 자체로 반환하는 함수이다.
-- 같은 
+- 같은 코드를 사용하는 여러 객체들을 생성해야 할 때 생성자 함수를 유용할게 사용할 수 있다.
+- 일반 함수와 다른 점은 new라는 키워드가 붙는 것과 객체 그 자체를 리턴한다는 점이다.
+> 어떤 함수든 생성자 함수가 될 수 있다.
+
+```javascript
+  const Foo = function() {};
+  const bar = new foo();
+  
+  bar; // {}
+  bar instanceof Foo; // true
+  bar instanceof Object; // true
+```
+- 생성자 함수는 Object를 리턴하게 되고, Object에 새로운 프로퍼티들을 할당하기 위해 `this`키워드를 함수에서 사용할 수 있다.
+- 생성자 함수로 생성한 각 object들에게 각각의 값을 주려고 할 때 `this`키워드를 사용해 매개변수로 값을 object들에게 넘긴다.
+```javascript
+  const Foo = function(name) {
+    this.name = name;
+  }
+  
+  const js = new Foo('js');
+  const jjss = new Foo('jjss');
+  
+  console.log(js); // Foo {name: "js"}
+  console.log(jjss); // Foo {name: "jjss"}
+  
+  console.log(js === jjss); // false
+```
+- new 키워드 없이 Foo()라는 함수를 실행하면 일반적인 함수처럼 동작할 것이다. 내부에 있는 this 키워드는 실행 컨텍스트와 응답을 주고 받는데 Foo()라는 함수를 전역 컨텍스트에서 실행시키게 되면 전역 컨텍스트 시점의 this인 window 객체에 this 프로퍼티가 추가 된다.
+
+# 래퍼 오브젝트 (Wrapper Object)
+- String, Number, Boolean 과 같은 원시타입을 new 키워드로 생성하면 원시 타입에 대한 래퍼 오브젝트가 생성된다.
+- String은 인자로 들어온 값들을 원시 문자열로 반환하는 전역함수이다.
+```javascript
+  console.log(String(1234)); // '1234'
+  console.log(String(true)); // 'true'
+  console.log(String(null)); // 'null'
+  console.log(String(undefined)); // 'undefined'
+  console.log(String(1234)) === 1234; // false
+  console.log(String(1234)) === '1234'; // true
+```
+- new 키워드를 붙이면 String은 생성자 함수로 사용이 가능하다.
+```javascript
+  const pet = new String('dog');
+  console.log(typeof pet); // object
+  console.log(pet === 'dog'); // false
+  
+  console.log(pet);
+  /*
+  String {"dog"}
+    0: "d"
+    1: "o"
+    2: "g"
+    length: 3
+  */
