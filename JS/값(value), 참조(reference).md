@@ -85,4 +85,20 @@
 - `reference`의 값만 변경했지만 `refCopy`의 값도 같이 바꼈다.
 
 ## 참조 재할당하기
+- 참조 값을 재할당 하는 것은 오래된 참조를 대체한다.
+```javascript
+  let obj = { first: 'refernce' };
+```
+- 메모리상태
 
+|Variables|Values|Addresses|Objects|
+|---|---|---|---|
+|obj|<#234>|#234|{ first: 'reference' }|
+
+- 만약 재할당 코드를 입력하면
+```javascript
+  let obj = { first: 'reference' };
+  obj = { second: 'ref2' };
+```
+- ㅐ
+- 둘 중 하나의 변수 값을 변경하면 두 변수 값의 모두 바뀐다
