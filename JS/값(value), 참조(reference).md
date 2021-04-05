@@ -186,3 +186,36 @@
 ```
 - 객체를 문자열로 변환한 후(JSON.stringify(person)) 다시 객체로(JSON.perser(JSON.stringify(person)) 변환되는 과정을 거쳐 새로운 객체를 만들고 그 결과를 새로운 변수에 할당한다. 원본 객체와 새로 생성한 객체는 같은 값을 가지지만 참조하고 있는 주소값은 다르다.
 - 새로운 객체는 반환이 되어아햐고 변수에 저장되어야 한다. 그렇지 않으면 가비지 컬렉션 될 것이다. 
+
+## 자가테스트
+```javascript
+  function changeAgeAndReference(person) {
+    person.age = 25;
+    person = {
+      name: 'john',
+      age: 50
+    };
+    
+    return person;
+  }
+  
+  let personObj1 = {
+    name: 'Alex',
+    age: 30
+  }
+  
+  let personObj2 = changeAgeAndReference(personObj1);
+  
+  console.log(personObj1);
+  console.log(personObj2);
+```
+
+- 함수는 처음에 넘겨진 원본 객체의 프로퍼티 age를 변경하고 변수 값에 새로운 객체를 다시 할당한다. 그리고 그 객체르 반환한다.
+```javascript
+  console.log(personObj1); // { name: 'Alex', age: 25 }
+  console.log(personObj2); // { name: 'john', age: 50 }
+```
+
+- 함수 속 변수 person은 personObj1로 향하는 참조를 갖고 있어서 처음에 전달 받은 객체에 직접 변화를 가한다.
+- person을 새로운 객체로 재할당 한 뒤에는 원본 객체에 더 이상 영향을 미치지 않는다. 
+- 이 재할당은 바깥 스코프에 있는 personObj1이 가리키는 객체를 변경하지 않는다. person변수는 새로운 참조를 갖게 된다.
