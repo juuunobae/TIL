@@ -24,6 +24,7 @@
   -  [함수와 블록 스코프](https://github.com/juuunobae/TIL/blob/main/JS/%ED%95%A8%EC%88%98%EC%99%80%20%EB%B8%94%EB%A1%9D%20%EC%8A%A4%EC%BD%94%ED%94%84.md)
   -  [표현식(Expressions)](https://github.com/juuunobae/TIL/blob/main/JS/%ED%91%9C%ED%98%84%EC%8B%9D(Expressions).md)
   -  [IIFE](https://github.com/juuunobae/TIL/blob/main/JS/IIFE.md)
+  -  [이벤트 루프](https://github.com/juuunobae/TIL/blob/main/JS/%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EB%A3%A8%ED%94%84.md)
   
 - NodeJS
   - [노드의 특성](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드의%20특성.md) 
