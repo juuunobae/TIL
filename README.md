@@ -25,6 +25,7 @@
   -  [표현식(Expressions)](https://github.com/juuunobae/TIL/blob/main/JS/%ED%91%9C%ED%98%84%EC%8B%9D(Expressions).md)
   -  [IIFE](https://github.com/juuunobae/TIL/blob/main/JS/IIFE.md)
   -  [이벤트 루프](https://github.com/juuunobae/TIL/blob/main/JS/%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EB%A3%A8%ED%94%84.md)
+  -  [스케쥴링](https://github.com/juuunobae/TIL/blob/main/JS/%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81.md)
   
 - NodeJS
   - [노드의 특성](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드의%20특성.md) 
