@@ -36,4 +36,52 @@
     myMethod: myMethod
   };
 ```
-- 코드 안의 myObject는 myMethod라는 프로퍼티를 갖고, 이 프로퍼티는 myMethod 함수를 가리킨다. myMethod 함수가 글로벌 스코프로부터 호출됐을 
+- 코드 안의 myObject는 myMethod라는 프로퍼티를 갖고, 이 프로퍼티는 myMethod 함수를 가리킨다. myMethod 함수가 글로벌 스코프로부터 호출됐을 때, `this`는 window object를 참조하고, myObject의 메소드로서 호출됐을 때는 , `this`가 myObject를 참조한다.
+```javascript
+  myObject.myMethod(); // this === myObject
+  myMethod(); // this === window
+```
+> 이러한 형식은 묵시적 바인딩이라 불린다.
+
+# 명시적 바인딩
+- 함수에 명시적으로 컨텍스트를 바인딩 하는 것, 주로 `call()` 메소드와 `apply()` 메소드에 의해 이루어진다.
+
+```javascript
+  var myMethod = function () {
+    console.log(this);
+  };
+  
+  var myObject = {
+    myMethod: myMethod
+  };
+  
+  myMethod() // this === window
+  myMethod.call(myObject, args1, args2, ...) // this === myObject
+  myMethod.apply(myObject, [array of args]) // this === myObject
+```
+- 명시적 바인딩은 묵시적 바인딩보다 우위를 갖는다.
+```javascript
+  var myMethod = function () {
+    console.log(this);
+  };
+  
+  var obj1 = {
+    a: 2, 
+    myMethod: myMethod
+  };
+  
+  
+  var obj2 = {
+    a: 3,
+    myMethod: myMethod
+  };
+  
+  obj1.myMethod(); // 2
+  obj2.myMethod(); // 3
+  
+  obj1.myMethod.call(obj2); // 3
+  obj2.myMethod.call(obj1); // 2
+```
+
+
+  
