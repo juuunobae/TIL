@@ -83,5 +83,27 @@
   obj2.myMethod.call(obj1); // 2
 ```
 
-
+# 하드 바인딩
+- 하드 바인딩은 `bind()`로 가능하다. `bind()` 메소드는 우리가 지정한 `this` 컨텍스트를 가진 기존 함수를 불러오기 위해 하드코딩된 새로운 함수를 반환한다.
+```javascript
+  myMethod = myMethod.bind(myObject);
+  myMethod(); // this === myObject
+```
+- 하드바인딩은 명시적 바인딩보다 우위를 갑는다.
+```javascript
+  var myMethod = function() {
+    console.log(this);
+  };
+  
+  var obj1 = {
+    a: 2
+  };
+  
+  var obj2 = {
+    a: 3
+  };
+  
+  myMethod = myMethod.bind(obj1); // 2
+  myMethod.call(obj2) // 2 명시적 자인딩은 obj2이다, obj1로 하드바인딩 되어있음
+```
   
