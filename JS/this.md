@@ -107,3 +107,15 @@
   myMethod.call(obj2) // 2 명시적 자인딩은 obj2이다, obj1로 하드바인딩 되어있음
 ```
   
+# 'New' 바인딩
+```javascript
+  function foo(a) {
+    tish.a = a;
+  }
+  
+  var bar = new foo(2);
+  conosole.log(bar.a); // 2
+```
+
+- 새로운 new 인스턴스를 참조하는 함수가 호출되었을 때, `this`가 만들어진다.
+- 함수가  
