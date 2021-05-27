@@ -118,4 +118,50 @@
 ```
 
 - 새로운 new 인스턴스를 참조하는 함수가 호출되었을 때, `this`가 만들어진다.
-- 함수가  
+- 함수가 new와 함께 호출되었을 때는 묵시적, 명시적 또는 하드 바인딩을 신경쓰지 않는다. 이 때는 그냥 새로운 인스턴스인 새로운 컨텍스트를 만들어낸다.
+
+```javascript
+  function foo(something) {
+    this.a = something;
+  }
+  
+  var obj1 = {};
+  
+  var bar = foo.bind(obj1);
+  bar(2);
+  console.log(obj1.a); // 2
+  
+  var baz = new bar(3);
+  console.log(obj1.a); // 2
+  console.log(bar.a); // 3
+```
+> 위에서 bar변수를 obj1로 바인딩 하였고, new 키워드 없이는 바인딩된대로 잘 동작하였으나, new 키워드가 붙은 이후에는 새로운 컨텍스트를 만들었다. 
+
+# API 호출
+- 때때로, 라이브러리나 헬퍼오브젝트를 사용한다. (Ajax, envet handling, etc.. ) 그리고 전달된 콜백을 호출한다. 이러한 경우 this의 동작을 주의해야 한다.
+```javascript
+  myObject = {
+    myMethod: function() {
+      helperObject.doSomethingCool('superCool',
+        this.onSomethingCoolDone);
+      },
+      
+      onSomethingCoolDone: function() {
+        /// Only god knows what is "this" here
+      }
+  };
+```
+- 'this.onSomethingCoolDone'을 콜백으로 넘겼기 때문에 스코프가 그 메소드를 참조하고 있다고 생각할 수도 있다.
+- 이 부분을 고치기 위해 몇 가지 방법이 있다.
+  - 주로 라이브러리들은 또 다른 파라미터를 제공한다. 그곳에 다시 가져오길 원하는 스코프를 전달할 수 있다.
+  ```javascript
+    myObject = {
+      myMethod: function() {
+        helperObject.doSomethingCool('superCool', this.onSomethingCoolDone, this);
+      },
+      
+      onSomethingCoolDone: function() {
+        /// Now everybody know that "this" === myObject
+      }
+    }
+  ```
