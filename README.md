@@ -29,6 +29,7 @@
   -  [DOM](https://github.com/juuunobae/TIL/blob/main/JS/DOM.md)
   -  [클래스](https://github.com/juuunobae/TIL/blob/main/JS/%ED%81%B4%EB%9E%98%EC%8A%A4.md)
   -  [this](https://github.com/juuunobae/TIL/blob/main/JS/this.md)
+  -  [new](https://github.com/juuunobae/TIL/blob/main/JS/new.md)
   
 - NodeJS
   - [노드의 특성](https://github.com/juuunobae/TIL/blob/main/NodeJS/노드의%20특성.md) 
