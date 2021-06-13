@@ -1,4 +1,4 @@
-# 'class' 키워드가 존재하디 전
+# 'class' 키워드가 존재하 전
 - **constructor**로 'classes'를 구현한다.
 - console창에 Cat 클래스를 만들고 meow 함수를 추가해본다.
 ```javascript
